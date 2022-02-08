@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("assets/fonts/bebasneue-book-webfont.woff");
+  font-weight: normal;
+}
+
+:root {
+  --font-primary: "Bebas Neue", cursive;
+  --font-secondary: "Montserrat", sans-serif;
+  --background: #2b2a30;
+  --black: #000;
+  --red: #9d0000;
+  --green: #00aa51;
+  --grey: #585858;
+  --white: #fff;
+  --gradient-background: radial-gradient(
+    71.4% 71.4% at 51.7% 28.6%,
+    #3a393f 0%,
+    #17171a 100%
+  );
+  --text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* CSS Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--white);
+  text-align: center;
+}
+
+span {
+  display: block;
+}
+
+/* Main Section */
+
+.container {
+  background: var(--black);
+  border-radius: 50%;
+  width: 51.8rem;
+  height: 51.8rem;
+  box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border-top: 0.9rem solid var(--red);
+  border-left: 0.9rem solid var(--red);
+  border-right: 0.9rem solid transparent;
+  border-bottom: 0.9rem solid var(--red);
+  transform: rotate(45deg);
+}
+
+.timer {
+  background: var(--gradient-background);
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 114px rgba(0, 0, 0, 0.45);
+  width: 50rem;
+  height: 50rem;
+  transform: rotate(-45deg);
+}
+
+.time {
+  font-family: var(--font-primary);
+  font-size: 19.6rem;
+  line-height: 19.6rem;
+  margin-top: 15.2rem;
+  text-shadow: var(--text-shadow);
+}
+
+.start-stop {
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  line-height: 2rem;
+  letter-spacing: 0.6em;
+  text-shadow: var(--text-shadow);
+  margin-top: 2.3rem;
+}
+
+.edit {
+  background: none;
+  border: none;
+  margin-top: 2.3rem;
+}
+
+.edit:hover {
+  cursor: pointer;
+}
+
+.gear-icon {
+  fill: var(--grey);
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+}
