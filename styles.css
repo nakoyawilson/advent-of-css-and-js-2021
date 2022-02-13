@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&display=swap");
 
 :root {
   --font-primary: "Montserrat", sans-serif;
@@ -47,4 +47,36 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.day:nth-of-type(6n + 4) {
+  background-image: url("assets/images/christmas-gifts-on-the-sledge.svg");
+}
+
+.day:nth-of-type(6n + 2) {
+  background-image: url("assets/images/christmas-jingles.svg");
+}
+
+.day:nth-of-type(6n + 5) {
+  background-image: url("assets/images/decorated-living-room.svg");
+}
+
+.day:nth-of-type(6n + 3) {
+  background-image: url("assets/images/christmas-tree.svg");
+}
+
+.day:nth-of-type(6n + 1) {
+  background-image: url("assets/images/gift-on-the-way.svg");
+}
+
+.day:nth-of-type(6n + 6) {
+  background-image: url("assets/images/girl-giving-gifts-to-man.svg");
+}
+
+.project-link {
+  text-decoration: none;
+  width: 100%;
 }
