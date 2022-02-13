@@ -1,8 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Playfair+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap");
 
 :root {
   --font-primary: "Montserrat", sans-serif;
   --font-secondary: "Playfair Display", serif;
+  --background: #eee;
+  --color-text: #064635;
+  --color-link: #519259;
+  --shadow: rgba(0, 0, 0, 0.15);
 }
 
 *,
@@ -18,6 +22,8 @@ html {
 }
 
 body {
+  background-color: var(--background);
+  color: var(--color-text);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,27 +35,38 @@ body {
   text-align: center;
 }
 
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
 .title {
   margin-bottom: 3rem;
   font-family: var(--font-secondary);
   font-size: 4rem;
+  font-weight: 700;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: min(95%, 60rem);
+  width: min(95%, 70rem);
+  gap: 2rem;
 }
 
 .day {
   width: 100%;
   height: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: left;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.day:hover {
+  box-shadow: 0.5rem 0.5rem 1rem var(--shadow);
 }
 
 .day:nth-of-type(6n + 4) {
@@ -77,6 +94,12 @@ body {
 }
 
 .project-link {
-  text-decoration: none;
+  display: block;
   width: 100%;
+  height: 100%;
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
