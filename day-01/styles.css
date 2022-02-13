@@ -52,6 +52,12 @@ span {
   display: block;
 }
 
+button {
+  background: none;
+  border: none;
+  display: block;
+}
+
 /* Main Section */
 
 .container {
@@ -95,22 +101,23 @@ span {
 }
 
 .start-stop {
+  color: var(--white);
   font-size: 1.6rem;
   font-weight: 700;
   font-family: var(--font-secondary);
   text-transform: uppercase;
   line-height: 2rem;
   letter-spacing: 0.6em;
+  /* margin-right: -0.6em; */
   text-shadow: var(--text-shadow);
-  margin-top: 2.3rem;
+  margin: 2.3rem auto 0;
 }
 
 .edit {
-  background: none;
-  border: none;
-  margin-top: 2.3rem;
+  margin: 2.3rem auto 0;
 }
 
+.start-stop:hover,
 .edit:hover {
   cursor: pointer;
 }
