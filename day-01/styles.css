@@ -94,6 +94,12 @@ button {
   transform: rotate(45deg);
 }
 
+.border.edit-time-border {
+  border-top: 0.9rem solid var(--green);
+  border-left: 0.9rem solid var(--green);
+  border-bottom: 0.9rem solid var(--green);
+}
+
 .timer {
   background: var(--gradient-background);
   border-radius: 50%;
@@ -144,4 +150,29 @@ button {
 
 .start-stop.hide-button:hover {
   cursor: default;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+  .container {
+    transform: scale(0.75);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container {
+    transform: scale(0.6);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .container {
+    transform: scale(0.4);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    transform: scale(0.35);
+  }
 }

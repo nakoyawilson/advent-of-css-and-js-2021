@@ -3,6 +3,7 @@ const seconds = document.getElementById("seconds");
 const startStop = document.getElementById("start-stop");
 const edit = document.getElementById("edit");
 const editIcon = document.getElementById("edit-icon");
+const border = document.getElementById("border");
 const initialTime = Number(minutes.innerHTML) * 60 + Number(seconds.innerHTML);
 
 let time = initialTime;
@@ -47,6 +48,7 @@ edit.addEventListener("click", () => {
     minutes.classList.add("edit-time");
     seconds.classList.add("edit-time");
     startStop.classList.add("hide-button");
+    border.classList.add("edit-time-border");
     startStop.disabled = true;
   } else if (
     editIcon.src.includes("check") &&
@@ -59,6 +61,7 @@ edit.addEventListener("click", () => {
     minutes.classList.remove("edit-time");
     seconds.classList.remove("edit-time");
     startStop.classList.remove("hide-button");
+    border.classList.remove("edit-time-border");
     startStop.disabled = false;
     time = Number(minutes.innerHTML) * 60 + Number(seconds.innerHTML);
   }
