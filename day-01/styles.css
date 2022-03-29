@@ -58,6 +58,17 @@ button {
   display: block;
 }
 
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 /* Main Section */
 
 .container {
@@ -102,6 +113,10 @@ button {
   justify-content: center;
 }
 
+.time .edit-time {
+  border-bottom: 1px dashed var(--white);
+}
+
 .start-stop {
   color: var(--white);
   font-size: 1.6rem;
@@ -110,7 +125,6 @@ button {
   text-transform: uppercase;
   line-height: 2rem;
   letter-spacing: 0.6em;
-  /* margin-right: -0.6em; */
   text-shadow: var(--text-shadow);
   margin: 2.3rem auto 0;
 }
@@ -124,7 +138,10 @@ button {
   cursor: pointer;
 }
 
-.gear-icon {
-  fill: var(--grey);
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+.hide-button {
+  opacity: 0;
+}
+
+.start-stop.hide-button:hover {
+  cursor: default;
 }
