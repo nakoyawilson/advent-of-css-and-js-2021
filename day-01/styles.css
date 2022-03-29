@@ -98,6 +98,8 @@ button {
   line-height: 19.6rem;
   margin-top: 15.2rem;
   text-shadow: var(--text-shadow);
+  display: flex;
+  justify-content: center;
 }
 
 .start-stop {
