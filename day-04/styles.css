@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+
+:root {
+  --font: "Inter", sans-serif;
+  --cyan: #60c1b6;
+  --dark-gray: #868888;
+  --light-gray: #f7f7f7;
+  --white: #ffffff;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Keyboard */
+
+.keyboard-container {
+  border-radius: 40px;
+  background-color: var(--light-gray);
+  padding: 4.3rem 5rem 4.4rem 4rem;
+  width: min(83.3333%, 120rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.key {
+  padding: 1.8rem 2.45rem;
+  background: var(--white);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  color: var(--dark-gray);
+}
+
+.key.character {
+  color: var(--cyan);
+}
