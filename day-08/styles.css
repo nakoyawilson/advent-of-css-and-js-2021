@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald&display=swap");
+
+:root {
+  --font-primary: "Oswald", sans-serif;
+  --font-secondary: "Krona One", sans-serif;
+  --light-blue1: #e9f5fa;
+  --light-blue2: #bce1ef;
+  --light-blue3: #d3ebf4;
+  --medium-blue1: #4db0d3;
+  --medium-blue2: #2b8bad;
+  --medium-blue3: #247490;
+  --dark-blue: #0e2e3a;
+  --yellow: #e6df95;
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light-blue1);
+  text-align: center;
+}
+
+svg {
+  display: block;
+}
+
+/* Main */
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 3.2rem;
+  width: min(90%, 172.5rem);
+  margin: 3.2rem auto;
+}
+
+.day {
+  font-family: var(--font-secondary);
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: 0.2em;
+  color: var(--medium-blue1);
+  text-transform: uppercase;
+}
+
+.date {
+  display: block;
+  font-size: 9.6rem;
+  line-height: 12.1rem;
+}
+
+.weather-data {
+  box-shadow: 0px 5.26953px 5.26953px rgba(0, 0, 0, 0.25),
+    14.4912px 5.26953px 44.791px rgba(32, 77, 92, 0.7);
+  border-radius: 65.8692px;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  width: 21.8rem;
+  height: 69.2rem;
+  position: relative;
+  padding: 30rem 0 3.2rem;
+  margin-top: 2rem;
+}
+
+.cloudy {
+  background-color: var(--medium-blue1);
+  color: var(--yellow);
+}
+
+.sunny {
+  background-color: var(--yellow);
+  color: var(--medium-blue1);
+}
+
+.stormy {
+  background-color: var(--dark-blue);
+  color: var(--yellow);
+}
+
+.snowy {
+  background-color: var(--light-blue2);
+  color: var(--dark-blue);
+}
+
+.rainy {
+  background-color: var(--medium-blue2);
+  color: var(--yellow);
+}
+
+.weather-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+}
+
+.day-container:nth-child(1) .weather-icon {
+  top: 7.1rem;
+}
+
+.day-container:nth-child(2) .weather-icon,
+.day-container:nth-child(7) .weather-icon {
+  top: 1.5rem;
+}
+
+.day-container:nth-child(3) .weather-icon {
+  top: 3.8rem;
+}
+
+.day-container:nth-child(4) .weather-icon {
+  top: 1rem;
+}
+
+.day-container:nth-child(5) .weather-icon {
+  top: 3rem;
+}
+
+.day-container:nth-child(6) .weather-icon {
+  top: -1.9rem;
+}
+
+.temperature {
+  font-size: 14.5rem;
+  line-height: 21.5rem;
+  position: relative;
+}
+
+.temperature::after {
+  content: "";
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 5px solid;
+  border-radius: 50%;
+  position: absolute;
+  top: 3.6rem;
+  right: 2rem;
+}
+
+.cloudy .temperature::after,
+.stormy .temperature::after,
+.rainy .temperature::after {
+  border-color: var(--yellow);
+}
+
+.sunny .temperature::after {
+  border-color: var(--medium-blue1);
+}
+
+.snowy .temperature::after {
+  border-color: var(--dark-blue);
+}
+
+.details-container {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 4.4rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  margin: 3.6rem auto 0;
+  width: 12rem;
+}
+
+.cloudy .details-container,
+.stormy .details-container,
+.rainy .details-container {
+  color: var(--light-blue3);
+}
+
+.sunny .details-container,
+.snowy .details-container {
+  color: var(--medium-blue3);
+}
+
+.cloudy .detail-icon-color,
+.stormy .detail-icon-color,
+.rainy .detail-icon-color {
+  fill: var(--light-blue3);
+}
+
+.sunny .detail-icon-color,
+.snowy .detail-icon-color {
+  fill: var(--medium-blue3);
+}
