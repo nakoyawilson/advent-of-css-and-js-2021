@@ -108,6 +108,10 @@ input[type="number"] {
   width: 11.2rem;
 }
 
+.code:focus {
+  outline: 2px solid var(--purple);
+}
+
 .verify {
   background: var(--gradient-bg);
   border-radius: 13.655px;
