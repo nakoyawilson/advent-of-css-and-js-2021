@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap");
+
+:root {
+  --font: "Source Sans Pro", sans-serif;
+  --light-purple: #e3e9f9;
+  --gray: #737580;
+  --purple: #6778e8;
+  --white: #ffffff;
+  --shadow: #cad0e0;
+  --input-bg: #f0f3fa;
+  --gradient-bg: linear-gradient(93.32deg, #8d9eff -10.93%, #a674fb 113.82%);
+  --text-shadow: rgba(0, 0, 0, 0.25);
+  --input-shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* CSS Reset */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--light-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Main */
+
+.container {
+  background-color: var(--white);
+  width: min(90%, 78.6rem);
+  box-shadow: 0px 31.4066px 60.0822px var(--shadow);
+  border-radius: 13.655px;
+  padding: 9.6rem 4.6rem 4.2rem;
+  text-align: center;
+}
+
+.heading {
+  font-weight: 900;
+  font-size: 27.3101px;
+  line-height: 34px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 27.3101px;
+  line-height: 34px;
+  color: var(--gray);
+  margin-top: 1.6rem;
+}
+
+/* Form */
+
+.form {
+  margin-top: 6rem;
+}
+
+.code-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.code {
+  background: var(--input-bg);
+  box-shadow: inset 0px 0px 5.46202px var(--input-shadow);
+  border: 1px solid transparent;
+  border-radius: 6.82752px;
+  font-weight: 900;
+  font-size: 81.4934px;
+  line-height: 102px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.11em;
+  color: var(--purple);
+  padding: 1rem;
+  width: 11.2rem;
+}
+
+.verify {
+  background: var(--gradient-bg);
+  border-radius: 13.655px;
+  display: block;
+  padding: 3.4rem;
+  font-family: var(--font);
+  font-weight: 900;
+  font-size: 27.3101px;
+  line-height: 34px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--white);
+  text-shadow: 0px 2.73101px 5.46202px var(--text-shadow);
+  border: 1px solid transparent;
+  margin-top: 6rem;
+  width: 100%;
+}
