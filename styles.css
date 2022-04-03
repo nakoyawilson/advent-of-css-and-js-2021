@@ -10,6 +10,8 @@
   --shadow: rgba(0, 0, 0, 0.15);
 }
 
+/* CSS Reset */
+
 *,
 *::after,
 *::before {
@@ -17,6 +19,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* General Styles */
 
 html {
   font-size: 62.5%;
@@ -41,6 +45,13 @@ a {
   text-decoration: none;
 }
 
+/* Main Styles */
+
+.main {
+  width: min(95%, 80rem);
+  margin: 3rem auto;
+}
+
 .title {
   margin-bottom: 3rem;
   font-family: var(--font-secondary);
@@ -51,8 +62,6 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: min(95%, 70rem);
-  margin: 3rem auto;
   gap: 2rem;
 }
 
@@ -71,6 +80,7 @@ a {
   align-items: center;
   font-size: 2.4rem;
   overflow: hidden;
+  text-align: center;
 }
 
 .day::before {
