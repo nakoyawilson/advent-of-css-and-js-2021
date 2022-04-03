@@ -125,3 +125,29 @@ input[type="number"] {
   margin-top: 6rem;
   width: 100%;
 }
+
+/* Media Queries */
+
+@media screen and (max-width: 756px) {
+  .code-container {
+    gap: 1.6rem;
+  }
+
+  .code {
+    font-size: 50px;
+    line-height: 55px;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .code {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
